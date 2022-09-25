@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>글씨 바꾸기</title>
+</head>
+<body>
+
+    <h1 id="hello"> 안녕하세요 </h1>
+    <h1 id="hi"> JS 초보에여 </h1>
+    <p> 코드 수정해보기 </p>
+
+    <script>
+        document.getElementById('hello').innerHTML = '안녕';
+        
+        // document.getElementById('??').?? = '???';
+        document.getElementById('hello').style.color = 'red';
+        //document.getElementById('hello').src = 'red';
+        //HTML문서의 ID='hello'요소가져와라 의 내부 HTML 을 안녕으로 바꿔라
+        document.getElementById('hi').innerHTML ='JS 고수에여';
+    </script>
+
+
+</body>
+
+</html>
