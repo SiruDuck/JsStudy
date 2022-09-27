@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="main.css">
+<title>두둥</title>
+</head>
+<body>
+
+<div class="alert-box" id="alert">
+    <p id="title">알림창임</p>
+</div>
+
+
+<button onclick="알림창('아이디 알림창임')"> 아이디 </button>
+<button onclick="알림창('비밀번호 알림창임')"> 비밀번호 </button>
+
+
+
+
+<script>
+
+function 알림창(글씨){
+    document.getElementById('title').innerHTML = 글씨;
+    document.getElementById('alert').style.display = 'block';
+}
+
+
+</script>    
+</body>
+
+</html>

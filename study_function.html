@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <title>함수 사용해보기</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="alert-box" id="alert">알림창</div>
+    <button onclick="Alert('block')">버튼</button>
+    <button onclick="Alert('none')">닫기</button>
+    
+    
+
+
+
+
+
+
+<script>
+    //비슷한 기능을 가진 함수들은 여러개 만들필요 없슴
+    function  Alert(a){
+        document.getElementById('alert').style.display=a;
+    }
+
+    // function closeAlert(){
+    //     document.getElementById('alert').style.display='none';
+    // }
+    
+</script>
+</body>
+
+
+</html>
