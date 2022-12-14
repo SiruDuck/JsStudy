@@ -1,0 +1,15 @@
+
+
+.header{
+    height: 20rem;
+    background-color: rgb(192, 192, 199);
+}
+.main{
+    height: 200rem;
+    background-color: rgb(244, 244, 248);
+}
+
+.footer{
+    height: 20rem;
+    background-color: #123;
+}
