@@ -26,18 +26,41 @@
              <button type="submit" class="btn btn-primary" id="send">전송</button>
              <button type="button" class="btn btn-danger" id="close">닫기</button>
           </form> 
-        </div>
       </div>
+    </div>
 
 
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
-        <span class="navbar-brand">Navbar</span>
+        <span class="navbar-brand">JSShop</span>
         <button  class="navbar-toggler" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
     </nav> 
+
+
+    <script>
+      window.addEventListener('scroll',function(){ //scroll event listner
+        //console.log( window.scrollY ); // window.pageYOffset 같은거임!
+        //window.scrollTop(0,100);     //강제로 스크롤하게.
+        //부트스트랩 넣으면 스무스하게 처리되는데 싫으면 scroll-behavior : auto; 하면 원상복구
+        // window.scrollBy(0,100);  //현재 위치부터 강제로 스크롤하기
+        //$(window).scrollTop() 현재 스크롤바 위치 출력 
+        if($(window).scrollTop()>100){
+          $(".navbar-brand").css("font-size","25px");
+        }else if ($(window).scrollTop() == 0){
+          $(".navbar-brand").css("font-size","30px");
+        }
+      });
+
+      $(window).on('scroll',function(){
+          $(window).scrollTop(); //현재 스크롤바 위치 출력
+          $(window).scrollTop(); //현재 스크롤바 이동
+      });
+
+    </script>
+
 
     <ul class="list-group">
       <li class="list-group-item">An item</li>
@@ -53,6 +76,43 @@
         <button id="login" class="btn btn-danger">로그인</button>
 
     </div>
+
+    <!--overflow-y => 내용물 넘치면 스크롤바 생성해줌-->
+    <p>회원 약관</p>
+    <div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+      Quae voluptas voluptatum minus praesentium fugit debitis at, 
+      laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, 
+      eligendi quae consectetur praesentium exercitationem.
+    </div> 
+    
+    <script>
+      //scrollY는 윈도우에만 붙일 수 있음. (현재 페이지)
+
+      //div의 스크롤바 내린 양 + 눈에보이는 div높이 == div의 실제 높이
+      var 스크롤양 = document.querySelector('.lorem').scrollTop;
+      var 실제높이 = document.querySelector('.lorem').scrollHeight;
+      console.log(스크롤양, 실제높이);
+      var 높이 = document.querySelector('.lorem').clientHeight;//눈에 보이는 div높이
+      console.log(높이);
+      //clientHeight 눈에보이는 div box의 높이
+
+      $(".lorem").on('scroll',function(){
+        console.log($(".lorem").scrollTop())
+        if(스크롤양 + 높이 == 실제높이){
+          alert('스크롤완료');
+      }
+      })
+
+
+      
+
+
+    </script>
+
+
+    <div style="height: 1000px;"></div>
+
 
 <div style="overflow: hidden;">
   <div class="slide-container">
